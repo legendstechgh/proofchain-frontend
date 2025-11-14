@@ -9,17 +9,17 @@ body {
   min-height: 100vh;
 }
 
-@media (max-width: 768px) {
-  body {
-    min-height: 100vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    overflow-x: hidden;
-  }
-
-  .title {
-    font-size: 2.2rem;
-  }
+@media (max-width: 768px){
+    body {
+        font-family: "Poppins", sans-serif;
+        background: radial-gradient(circle at top, #0a1b33, #000814 80%);
+        color: #f8fafc;
+        min-height:  50vh;
+        overflow-x: hidden;
+    }
+   .title {
+      font-size: 2.2rem;
+    }
 
   .card-container {
     padding: 1.5rem;
@@ -27,11 +27,12 @@ body {
   }
 
   .theme-button {
-    margin-left: 0; /* Fix layout breaking */
+    margin-left: 0%; /* Fix layout breaking */
     transform: scale(0.8);
   }
-}
 
+
+}
 /* Container */
 .app-container {
   display: flex;
