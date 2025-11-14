@@ -27,7 +27,7 @@ body {
   }
 
   .theme-button {
-    margin-left: 10%; /* Fix layout breaking */
+    margin-left: -10%; /* Fix layout breaking */
     transform: scale(0.8);
   }
 
