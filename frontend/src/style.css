@@ -16,6 +16,9 @@ body {
         color: #f8fafc;
         min-height:  50vh;
     }
+    .theme-button{
+    margin-left: 90%;
+}
 }
 
 /* Container */
