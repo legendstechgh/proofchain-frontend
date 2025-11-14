@@ -15,22 +15,23 @@ function App() {
   }, [theme]);
 
 
-  const handleUpload = async () => {
-    if (!file) return alert("Please upload an image");
+const handleUpload = async () => {
+  if (!file) return alert("Please upload an image");
 
-    const formData = new FormData();
-    formData.append("file", file);
-    setLoading(true);
+  const formData = new FormData();
+  formData.append("file", file);
+  setLoading(true);
 
-    const res = await fetch("http://localhost:5000/analyze", {
-      method: "POST",
-      body: formData,
-    });
+  const res = await fetch("https://proofchain-backend.onrender.com/analyze", {
+    method: "POST",
+    body: formData,
+  });
 
-    const data = await res.json();
-    setResult(data);
-    setLoading(false);
-  };
+  const data = await res.json();
+  setResult(data);
+  setLoading(false);
+};
+
 
   
   return (
