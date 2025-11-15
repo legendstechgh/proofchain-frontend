@@ -2,37 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
-/* small helpers and fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;500;600&display=swap');
-
-:root {
-  --proof-blue: #00A4FF;
-  --chain-green: #24FF8A;
+/* GLOBAL */
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at 30% 10%, #0d1b2a 0%, #000814 80%);
+  min-height: 100vh;
+  color: #f8fafc;
+  overflow-x: hidden;
 }
 
-/* font utilities */
-.font-orbitron { font-family: 'Orbitron', sans-serif; }
-.font-poppins { font-family: 'Poppins', sans-serif; }
-
-/* small animation used by card */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Fix background on mobile to avoid zoom stretching */
+@media (max-width: 768px) {
+  body {
+    background: radial-gradient(circle at 50% -10%, #0d223c, #000814 85%);
+  }
 }
-.animate-fade-in { animation: fadeIn 420ms ease both; }
 
-/* Safety: hide any stray floating image with class .flag-icon */
-.flag-icon { display: none !important; }
+/* CONTAINER */
+.app-container {
+  max-width: 450px;
+  margin: auto;
+  padding: 1.5rem;
+  text-align: center;
+}
 
-/* Theme helpers: Tailwind will handle colors, these are fallbacks */
-html.dark { color-scheme: dark; }
-html.light { color-scheme: light; background: #f8fafc; }
+/* LOGO */
+.logo {
+  width: 150px;
+  margin: 0 auto 10px;
+}
 
-/* Accessibility: ensure inputs inside label behave on small screens */
-label input[type="file"] + * { pointer-events: none; }
+/* TITLE */
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
 
-/* Fix for Netlify preview / mobile: ensure no huge height */
-html, body, #root { height: 100%; }
+.proof-text {
+  color: #00a4ff;
+  text-shadow: 0 0 8px #0076c9;
+}
 
-/* Reduce default outline for buttons but keep keyboard visibility */
-button:focus { outline: 2px solid rgba(255,255,255,0.08); outline-offset: 2px; }
+.chain-text {
+  color: #24ff8a;
+  text-shadow: 0 0 8px #16c76c;
+}
+
+/* TAGLINE */
+.tagline {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  color: #9ee7c9;
+}
+
+/* CARD */
+.card-container {
+  margin-top: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 255, 170, 0.15);
+  padding: 1.8rem;
+  box-shadow: 0 8px 30px rgba(0, 255, 170, 0.08), 0 0 25px rgba(0, 170, 255, 0.06);
+}
+
+/* BUTTONS — Cyber Glow */
+.upload-btn,
+.analyze-btn {
+  width: 100%;
+  padding: 0.85rem 1.4rem;
+  border-radius: 14px;
+  font-weight: 600;
+  color: white;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 200, 255, 0.25);
+}
+
+/* Upload Button (Blue → Green) */
+.upload-btn {
+  background: linear-gradient(135deg, #006dff, #00e384);
+  margin-bottom: 1rem;
+}
+
+.upload-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.45);
+}
+
+/* Analyze Button (Neon Green) */
+.analyze-btn {
+  background: linear-gradient(135deg, #0a84ff, #24ff8a);
+}
+
+.analyze-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 15px rgba(36, 255, 138, 0.45);
+}
+
+/* RESULTS */
+.result-box {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 200, 0.15);
+  color: #a6fbd2;
+  text-align: left;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 2.5rem;
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
+
+/* THEME BUTTON (Moved & Fixed) */
+.theme-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
