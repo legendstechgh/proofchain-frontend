@@ -27,7 +27,7 @@ body {
   }
 
   .theme-button {
-    margin-right: 40%; /* Fix layout breaking */
+    margin-right: 50%; /* Fix layout breaking */
     transform: scale(0.8);
   }
 
@@ -136,6 +136,7 @@ body {
   margin-top: 3rem;
   opacity: 0.6;
   font-size: 0.9rem;
+  marging-bottom: 2%;
 }
 
 html.dark body {
