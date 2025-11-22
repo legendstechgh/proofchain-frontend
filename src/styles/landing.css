@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Landing specific */
+.landing-root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* NAV */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(10,25,45,0.6), rgba(10,25,45,0.2));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit; }
+.nav-logo { width:36px; }
+.nav-title { font-weight:700; color:var(--neon-blue); font-family:"Orbitron",sans-serif; }
+.nav-links { display:flex; gap:12px; align-items:center; }
+.nav-link { color:rgba(255,255,255,0.85); text-decoration:none; padding:8px 12px; border-radius:8px; }
+.btn-small { background: linear-gradient(90deg,#0a84ff,#24ff8a); color:#fff; }
+
+/* HERO */
+.hero { display:flex; gap:32px; align-items:center; justify-content:space-between; padding:36px 0; }
+.hero-left { flex: 1 1 520px; }
+.hero-right { flex: 0 1 420px; display:flex; justify-content:center; }
+.hero-title { font-family:"Orbitron",sans-serif; font-size:2.6rem; margin:0 0 12px; color:#fff; line-height:1.02;}
+.accent-blue { color: var(--neon-blue); }
+.accent-green { color: var(--neon-green); }
+.hero-sub { color: rgba(255,255,255,0.8); margin-bottom:18px; font-size:1.05rem; }
+
+/* CTA */
+.hero-ctas { display:flex; gap:14px; margin-bottom:18px; }
+.btn-primary {
+  background: linear-gradient(90deg,#0a84ff,#24ff8a);
+  color: white;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn-ghost {
+  color: rgba(255,255,255,0.9);
+  background: transparent;
+  padding:12px 18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.04);
+  text-decoration:none;
+}
+
+/* trust pills */
+.trust-row { display:flex; gap:10px; margin-top:10px; }
+.trust-pill { background: rgba(255,255,255,0.03); padding:6px 10px; border-radius:8px; font-size:0.9rem; color: rgba(255,255,255,0.8); }
+
+/* device mockup */
+.device-mockup { width:320px; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.mock-logo { width:120px; opacity:0.95; }
+.mock-screen { width:320px; height:220px; border-radius:16px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06)); border:1px solid rgba(255,255,255,0.04); box-shadow:0 10px 30px rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; }
+.mock-screen-inner { padding:12px; text-align:center; color:rgba(255,255,255,0.8); }
+.mock-preview { width:240px; height:110px; background: linear-gradient(90deg, rgba(0,164,255,0.06), rgba(36,255,138,0.03)); border-radius:10px; margin:12px auto; }
+
+
+/* FEATURES */
+.features { padding: 28px 0; }
+.section-title { color:var(--neon-blue); font-family:"Orbitron",sans-serif; font-size:1.4rem; margin-bottom:12px; }
+.features-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; }
+.feature-card { background: rgba(255,255,255,0.02); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); }
+.feature-icon { font-size:22px; margin-bottom:8px; }
+
+/* ARCHITECTURE */
+.architecture { padding:28px 0; text-align:center; }
+.arch-image-wrap { display:flex; justify-content:center; }
+.arch-image { max-width:100%; width:860px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); }
+
+/* CTA bottom */
+.cta-bottom { padding:28px 0; text-align:center; }
+.btn-primary.wide { padding:14px 28px; font-size:1.05rem; }
+
+/* Footer */
+.landing-footer { margin-top:30px; padding:18px 0; color:rgba(255,255,255,0.6); text-align:center; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero { flex-direction:column-reverse; gap:18px; }
+  .arch-image { width:100%; max-width:520px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .device-mockup { width:100%; }
+  .hero-right { width:100%; }
+}
+
+
