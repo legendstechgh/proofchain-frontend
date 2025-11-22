@@ -67,7 +67,7 @@ ProofChain solves a **more critical**, **more urgent**, and **more socially impa
 
 # 🧩 **System Architecture**
 
-[https://github.com/legendstechgh/proofchain-frontend/blob/main/frontend/public/ProofChain_Architecture.png](https://github.com/legendstechgh/proofchain-frontend/blob/main/frontend/public/ProofChain_Architecture.png)
+[https://github.com/legendstechgh/proofchain-frontend/blob/main/public/ProofChain_Architecture.png](https://github.com/legendstechgh/proofchain-frontend/blob/main/public/ProofChain_Architecture.png)
 
 
 The architecture includes:
