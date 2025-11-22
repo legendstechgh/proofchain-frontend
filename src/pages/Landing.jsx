@@ -40,7 +40,7 @@ export default function Landing() {
                 <div className="mock-screen-inner">
                   <p className="mock-top">ProofChain • Quick Verify</p>
                   <div className="mock-preview">
-                    <img src="./public/mockup.png" alt="ProofChain preview" style={{ width: '100%', height: '100%', borderRadius: '10px', objectFit: 'cover' }} />
+                    <img src="/mockup.png" alt="ProofChain preview" style={{ width: '100%', height: '100%', borderRadius: '10px', objectFit: 'cover' }} />
                   </div>
                   <div className="mock-text">Upload → Analyze → Anchor</div>
                 </div>
