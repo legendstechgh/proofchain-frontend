@@ -80,7 +80,7 @@ export default function Landing() {
 
         <section className="architecture">
           <h2 className="section-title">Architecture</h2>
-          <p className="arch-sub">React → Express → Walrus (optional) → Sui Move module</p>
+          <p className="arch-sub">React → Express → Walrus → Sui Move module</p>
           <div className="arch-image-wrap">
             <img src={ARCH_IMG} alt="Architecture diagram" className="arch-image" />
           </div>
