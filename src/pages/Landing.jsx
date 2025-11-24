@@ -28,7 +28,7 @@ export default function Landing() {
 
             <div className="trust-row">
               <div className="trust-pill">Sui • Move</div>
-              <div className="trust-pill">Walrus-ready</div>
+              <div className="trust-pill">Walrus</div>
               <div className="trust-pill">QR Certificate</div>
             </div>
           </div>
